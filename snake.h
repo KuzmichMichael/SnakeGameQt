@@ -3,21 +3,18 @@
 
 #include <vector>
 
-class Snake //TODO: realise methods
+class Snake
 {
-
-
-public:
-    Snake();
-    ~Snake() = default;
-
 private:
+    static constexpr const int m_cellImageSize = 10;
+
     enum class directions{
         RIGHT,
         LEFT,
         UP,
         DOWN
     };
+    directions m_currentHeadDirection;
 
     struct Cell
     {
@@ -25,12 +22,15 @@ private:
         int y;
     };
 
-    std::vector<Cell> m_wholeSnake;
+public:
+    Snake();
+    ~Snake() = default;
 
-    directions m_currentHeadDirection = directions::RIGHT;
+     std::vector<Cell> wholeSnake;
 
-    void addCell();
-    void moveSnake();
+     void addCell();
+     void moveSnake();
+     void changeDirection(int key);
 };
 
 
