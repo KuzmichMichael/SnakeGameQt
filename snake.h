@@ -28,6 +28,9 @@ public:
 
      std::vector<Cell> wholeSnake;
 
+     const int getCellSize();
+     const Cell getHead();
+
      void addCell();
      void moveSnake();
      void changeDirection(int key);

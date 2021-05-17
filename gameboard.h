@@ -30,6 +30,10 @@ public:
 
     void repaintBoard();
 
+    const bool isSnakeBiteTail();
+    const bool isSnakeEatApple();
+    const bool isSnakeOutOfBounds();
+
     static const int getBoardSizeX();
     static const int getBoardSizeY();
 
@@ -43,6 +47,10 @@ private:
     int m_gameTimer;
     int m_delay = 100;
     bool isInGame;
+    bool isSnakeExist;
+    bool isFruiteExist;
+    bool isSnakeBiteItself;
+    bool isSnakeOutside;
 
     QImage m_cellImage;
     QImage m_headImage;
